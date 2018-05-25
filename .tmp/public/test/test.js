@@ -97,14 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ev.preventDefault();
   });
 
+  // Changed PUT to PATCH because:
+  // Using `PUT` to update a record is deprecated in Sails 1.0.  Use `PATCH` instead!
+
   // Favorite / Unfavorite restaurant by id
   const favbid = document.querySelector('#FAVBID');
   favbid.addEventListener('submit', ev => {
     const url = `${API_ROOT}/restaurants/${favbid.querySelector('#restaurant_id').value}/?is_favorite=${favbid.querySelector('#is_favorite').checked ? 'true' : 'false'}`;
-    fetch(url, { method: 'PUT' })
+    fetch(url, { method: 'PATCH' })
       .then(response => response.text())
       .then(result => log(result))
-      .catch(err => log(`ERROR sending PUT request ${url}\n${err}`));
+      .catch(err => log(`ERROR sending PATCH request ${url}\n${err}`));
     ev.preventDefault();
   });
 
@@ -113,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updrv.addEventListener('submit', ev => {
     const url = `${API_ROOT}/reviews/${updrv.querySelector('#review_id').value}`;
     fetch(url, {
-      method: 'PUT',
+      method: 'PATCH',
       body: JSON.stringify({
         name: updrv.querySelector('#name').value,
         rating: updrv.querySelector('#rating').value,
@@ -122,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
       .then(response => response.text())
       .then(result => log(result))
-      .catch(err => log(`ERROR sending PUT request ${url}\n${err}`));
+      .catch(err => log(`ERROR sending PATCH request ${url}\n${err}`));
     ev.preventDefault();
   });
 
