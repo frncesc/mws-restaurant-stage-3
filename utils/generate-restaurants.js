@@ -262,5 +262,5 @@ restaurants.forEach(r => {
   const latlng = JSON.stringify(r.latlng);
   const operating_hours = JSON.stringify(r.operating_hours);
 
-  console.log(`{"createdAt":${created},"updatedAt":${updated},"id":${r.id},"name":"${name}","neighborhood":"${r.neighborhood}","address":"${r.address}","latlng":${latlng},"cuisine_type":"${r.cuisine_type}","operating_hours":${operating_hours},"is_favorite":${r.is_favorite},"_id":${r.id}}`);
+  console.log(`{"createdAt":${created},"updatedAt":${updated},"id":${r.id},"name":"${name}","photograph":"${r.photograph}","neighborhood":"${r.neighborhood}","address":"${r.address}","latlng":${latlng},"cuisine_type":"${r.cuisine_type}","operating_hours":${operating_hours},"is_favorite":${r.is_favorite},"_id":${r.id}}`);
 });
