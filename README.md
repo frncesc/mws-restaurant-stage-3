@@ -1,4 +1,41 @@
 # Local Development API Server
+
+Updated from Sails v0.12 to [Sails v1](https://sailsjs.com/) by [Francesc Busquets](mailto:francesc@gmail.com)
+
+### Main changes introduced
+
+- Application generated from scratch with [sails-generate](https://github.com/balderdashy/sails-generate)
+
+- Created custom models for "restaurants" and "reviews" in `api/models`
+
+- Created a very simple API test suite in `assets/test`
+
+- Created two scripts (`utils/generate-restaurants.js` and `utils/generate-reviews.js`), useful for generating the restaurants API test data. To reset the database at its original state, just stop Sails (if already running) and launch:
+
+  ```
+  npm run reset-db
+  ```
+
+### Startup
+
+To launch the API server, just [install Sails v1 globally](https://sailsjs.com/get-started) on your system and then launch:
+
+```
+sails lift
+```
+
+The API test suite will then be available in:
+```
+http://localhost:1337/test
+```
+
+Note that the `PUT` method has been replaced with `PATCH`, as [proposed](https://sailsjs.com/documentation/reference/blueprint-api/update) by Sails v1.
+
+
+Original README follows (needs to be updated!):
+
+---
+
 ## Usage
 #### Get Restaurants
 ```
