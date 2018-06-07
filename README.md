@@ -4,13 +4,13 @@ Updated from Sails v0.12 to [Sails v1](https://sailsjs.com/) by [Francesc Busque
 
 ### Main changes introduced
 
-- Application generated from scratch with [sails-generate](https://github.com/balderdashy/sails-generate)
+- Generated from scratch with [sails-generate](https://github.com/balderdashy/sails-generate)
 
 - Created custom models for "restaurants" and "reviews" in `api/models`
 
-- Created a very simple API test suite in `assets/test`
+- Created a simple API test suite in `assets/test`
 
-- Created two scripts (`utils/generate-restaurants.js` and `utils/generate-reviews.js`), useful for generating the restaurants API test data. To reset the database at its original state, just stop Sails (if already running) and launch:
+- Created two scripts (`utils/generate-restaurants.js` and `utils/generate-reviews.js`), useful for generating the restaurants API test data. To reset the database at its original state, just stop Sails (if running) and launch:
 
   ```
   npm run reset-db
@@ -18,21 +18,21 @@ Updated from Sails v0.12 to [Sails v1](https://sailsjs.com/) by [Francesc Busque
 
 ### Startup
 
-To launch the API server, just [install Sails v1 globally](https://sailsjs.com/get-started) on your system and then launch:
+To launch the API server [install Sails v1 globally](https://sailsjs.com/get-started) and then launch:
 
 ```
 sails lift
 ```
 
-The API test suite will then be available in:
+The API test suite is available at:
 ```
 http://localhost:1337/test
 ```
 
-Note that the `PUT` method has been replaced with `PATCH`, as [proposed](https://sailsjs.com/documentation/reference/blueprint-api/update) by Sails v1.
+Notice that the `PUT` method has been replaced by `PATCH`, as [proposed](https://sailsjs.com/documentation/reference/blueprint-api/update) by Sails v1.
 
 
-Original README follows (needs to be updated!):
+Original README follows (it must be updated!):
 
 ---
 
