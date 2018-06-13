@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const resp = document.querySelector('#response');
   resp.innerHTML = '';
   const log = text => {
-    resp.innerHTML = text;
-    console.log(text);
+    const textObj = /^[[{]/.test(text) ? JSON.parse(text) : null;
+    resp.innerHTML = textObj ? JSON.stringify(textObj, null, 1) : text;
+    console.log(textObj || text);
   };
 
   // Get all restaurants

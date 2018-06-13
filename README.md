@@ -18,18 +18,33 @@ Updated from Sails v0.12 to [Sails v1](https://sailsjs.com/) by [Francesc Busque
 
 ### Startup
 
-To launch the API server [install Sails v1 globally](https://sailsjs.com/get-started) and then launch:
-
+The steps to reproduce to launch the API server are:
+Install Sails v1 [globally](https://sailsjs.com/get-started):
+```
+npm install -g sails
+```
+Install the NPM dependencies:
+```
+npm install
+```
+Launch Sails in development mode:
 ```
 sails lift
 ```
 
-The API test suite is available at:
+To launch Sails in production mode, use:
+```
+npm run start
+```
+
+In both cases, the API test suite will be available at:
 ```
 http://localhost:1337/test
 ```
 
 Notice that the `PUT` method has been replaced by `PATCH`, as [proposed](https://sailsjs.com/documentation/reference/blueprint-api/update) by Sails v1.
+
+---
 
 
 Original README follows (it must be updated!):
