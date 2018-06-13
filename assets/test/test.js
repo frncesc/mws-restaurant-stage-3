@@ -2,7 +2,7 @@
 // Set listeners when all DOM content is loaded
 document.addEventListener('DOMContentLoaded', () => {
 
-  const API_ROOT = 'http://localhost:1337';
+  const API_ROOT = '..';
 
   // Response body area
   const resp = document.querySelector('#response');
