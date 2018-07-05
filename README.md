@@ -41,6 +41,12 @@ In both cases, the API test suite will be available at:
 ```
 http://localhost:1337/test
 ```
+To start the server as a daemon service, just install [pm2](http://pm2.keymetrics.io/) and launch:
+
+```
+pm2 start ecosystem.config.js
+```
+
 
 Notice that the `PUT` method has been replaced by `PATCH`, as [proposed](https://sailsjs.com/documentation/reference/blueprint-api/update) by Sails v1.
 
